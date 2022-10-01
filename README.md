@@ -1,14 +1,28 @@
-# Welcome to your CDK TypeScript project
+## CDK Config
+```bash
+# Check AWS credentials
+aws s3 ls
+# If no credentials set credentials
+# aws configure
 
-This is a blank project for CDK development with TypeScript.
+# configure aws cdk
+alias cdk='npx cdk'
+cdk bootstrap
+```
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Got ERR_REQUIRE_ESM issue
+```bash
+#package.json
+    "got": "^11"
+```
+>[link blog](https://bobbyhadz.com/blog/javascript-got-error-err-require-esm-of-es-module)
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Deploy
+```bash
+cdk deploy
+```
+## Invoke lambda
+```bash
+alias booktoki_async='aws lambda invoke --function-name booktoki --cli-binary-format raw-in-base64-out --invocation-type Event --payload'
+alias booktoki='aws lambda invoke --function-name booktoki --cli-binary-format raw-in-base64-out --payload'
+```

@@ -8,21 +8,29 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "ts-node": "dotenv -e .env.local -- ts-node -r tsconfig-paths/register --compiler-options '{\"module\":\"CommonJS\"}'"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.106",
     "@types/jest": "^27.5.2",
     "@types/node": "10.17.27",
     "@types/prettier": "2.6.0",
+    "aws-cdk": "2.44.0",
+    "aws-lambda": "^1.0.7",
+    "dotenv-cli": "^6.0.0",
+    "esbuild": "^0.15.10",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
-    "aws-cdk": "2.44.0",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
     "aws-cdk-lib": "2.44.0",
+    "cheerio": "^1.0.0-rc.12",
     "constructs": "^10.0.0",
+    "got": "^11",
     "source-map-support": "^0.5.21"
   }
 }
